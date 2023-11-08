@@ -8,10 +8,11 @@
 let x=0;
 function f1(a,b)
 {
-	   x= a * b;
+	let x;
+	x= a * b;
+	document.getElementById("item").innerHTML=x;
 }
 f1(3,6);
-document.getElementById("item").innerHTML=x;
 </script>
 </body>
 </html>
