@@ -5,13 +5,15 @@
 <body>
 <p id="item"></p>
 <script>
-let x=0;
 function f1()
 {
-	 x=3 * 3;
+	let p1= 3;
+	let p2= 3;
+	let x;
+	x= p1  * p2;
+	document.getElementById("item").innerHTML=x;
 }
 f1();
-document.getElementById("item").innerHTML=x;
 </script>
 </body>
 </html>
