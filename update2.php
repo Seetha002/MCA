@@ -12,14 +12,16 @@
 	$quantity=$_POST['qn'];
 	$price=$_POST['pz'];
 	$sql = "UPDATE library SET Book_name='$bname',Author='$author',Publisher='$publisher',Quantity='$quantity',Prize='$price' WHERE Id='$id1'";
-
-if (mysqli_query($conn, $sql)) {
-  echo "Record updated successfully";
-} else {
-  echo "Error updating record: " . mysqli_error($conn);
-}
-
-mysqli_close($conn);
+	$result=mysqli_query($conn, $sql);
+	if ($result) 
+	{
+  		header('Location: successpage.html');
+	} 
+	else 
+	{
+ 		 header('Location: fail.html');
+	}
+	mysqli_close($conn);
 	}
 	?>
 	</body>
